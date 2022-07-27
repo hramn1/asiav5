@@ -1,0 +1,25 @@
+.payment_method{
+  max-width: 500px;
+  margin: 20px auto;
+}
+.payment-info{
+  background-image: linear-gradient(to top, #3DAF85,  #2BE9A3);
+  border-radius: 20px;
+  padding: 2px;
+  &-inner{
+    background-color: #fff;
+    padding: 16px 26px;
+    border-radius: 20px;
+  }
+  &__label{
+    font-size: 14px;
+    color: #2BE9A3;
+    margin: 0;
+  }
+  &__text{
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 31px;
+  }
+}
