@@ -2,12 +2,14 @@
   max-width: 500px;
   margin: 20px auto;
   padding: 10px;
+  position: relative;
+  background-color: #fff;
   &__title{
     line-height: 20.5px;
     font-size: 16px;
     font-weight: 700;
-    margin-left: 26px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    margin-left: 16px;
   }
 }
 .payment-info-title{
@@ -41,6 +43,7 @@
   padding: 16px;
   border-radius: 20px;
   background-color: #F1F1F1;
+  margin-bottom: 25px;
   &__list{
     margin: 0;
     padding: 0;
@@ -49,21 +52,181 @@
   &__item{
     text-transform: uppercase;
     background-color: #fff;
-    padding: 16px 17px 17px 30px;
+    padding: 16px 17px 17px 34px;
     margin-bottom: 10px;
     border-radius: 10px;
     position: relative;
-    text-align: center;
+    & p {
+      position: relative;
+      margin: 0;
+      padding-left: 90px;
+      &::before{
+        content: "";
+        position: absolute;
+        display: block;
+        background-repeat: no-repeat;
+      }
+    }
+    &--bank p::before{
+      width: 55px;
+      height: 25px;
+      background-image: url(../img/local-bank.svg);
+      left: 22px;
+      top: -3px;
+    }
+    &--debit p::before{
+      width: 45px;
+      height: 35px;
+      background-image: url(../img/online-debit.svg);
+      left: 22px;
+      top: -3px;
+    }
+    &--duti p::before{
+      width: 30px;
+      height: 30px;
+      background-image: url(../img/duti.svg);
+      left: 22px;
+      top: -3px;
+    }
+    &--touch p::before{
+      width: 40px;
+      height: 40px;
+      background-image: url(../img/touchngo.svg);
+      left: 22px;
+      top: -3px;
+    }
     &::before{
       content: "";
       position: absolute;
       width: 18px;
-      left: 0;
+      left: 16px;
+      top: 14px;
       height: 18px;
       border: 2px solid #F1F1F1;
       border-radius: 50%;
-
     }
-
+  }
+}
+.bottom-payment{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+  &__secure {
+    letter-spacing: 0.21em;
+    margin: 0;
+    position: relative;
+    &::before{
+      display: block;
+      content: "";
+      width: 24px;
+      height: 30px;
+      position: absolute;
+      background-image: url(../img/footer-logo.svg);
+      left: -30px;
+    }
+  }
+  &__ssl{
+    font-size: 9px;
+    margin: 0;
+  }
+}
+.top-head{
+  margin-bottom: 30px;
+  display: flex;
+  margin-top: 15px;
+  justify-content: space-between;
+  &__back{
+    text-decoration: none;
+    color: #000;
+    opacity: 0.5;
+    margin-left: 16px;
+  }
+  &__lang{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    &[data-lang = "en"]{
+      background-image: url(../img/english-flag.svg);
+    }
+  }
+}
+.modal-language{
+  display: none;
+  &--active{
+    display: flex;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    justify-content: space-between;
+    color: #ffffff;
+    z-index: 20;
+  }
+}
+.modal-language__close{
+  width: 19px;
+  height: 19px;
+  background-image: url(../img/close.svg);
+  background-position: 0 100%;
+  padding-top: 20px;
+  background-repeat: no-repeat;
+}
+.modal-lang-list{
+  list-style: none;
+  margin: 0;
+  &__item{
+    padding: 20px 60px 20px 10px;
+    position: relative;
+    text-align: right;
+    &::after{
+      position: absolute;
+      display: block;
+      content: "";
+      width: 40px;
+      height: 40px;
+      right: 0;
+      top: 10px;
+    }
+    &[data-lang = "en"]::after{
+      background-image: url(../img/english-flag.svg);
+    }
+    &[data-lang = "vn"]::after{
+      background-image: url(../img/vn.svg);
+    }
+    &[data-lang = "ph"]::after{
+      background-image: url(../img/ph.svg);
+    }
+    &[data-lang = "ch"]::after{
+      background-image: url(../img/ch.svg);
+    }
+    &[data-lang = "th"]::after{
+      background-image: url(../img/th.svg);
+    }
+    &[data-lang = "in"]::after{
+      background-image: url(../img/in.svg);
+    }
+    & a {
+      color: #ffffff;
+      text-decoration: none;
+      line-height: 18px;
+    }
+  }
+}
+.modal-overlay{
+  display: none;
+  &--active{
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.7);
+    //backdrop-filter: blur(4px);
   }
 }

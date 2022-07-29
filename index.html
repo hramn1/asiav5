@@ -11,8 +11,14 @@
 </head>
 <body>
   <section class="payment_method">
+    <div class="wrapper">
+
+
+    <section class="top-head">
+      <a href="#" class="top-head__back">Back to merchant</a>
+      <a href="#" class="top-head__lang" data-lang="en"></a>
+    </section>
     <h2 class="payment_method__title">PAYMENT METHODS</h2>
-    <p class="payment-info-title">PAYMENT INFO</p>
     <div class="payment-info">
       <div class="payment-info-inner">
         <p class="payment-info__label">Merchant</p>
@@ -24,17 +30,31 @@
     <p>CHOOSE YOUR METHOD</p>
     <div class="choose-method">
       <ul class="choose-method__list">
-        <li class="choose-method__item">Online debit</li>
-        <li class="choose-method__item">Local Bank Transfer</li>
-        <li class="choose-method__item">DuitNow</li>
-        <li class="choose-method__item">TouchnGo </li>
+        <li class="choose-method__item choose-method__item--debit"><p>Online debit</p></li>
+        <li class="choose-method__item choose-method__item--bank" ><p>Local Bank Transfer</p></li>
+        <li class="choose-method__item choose-method__item--duti"><p>DuitNow</p></li>
+        <li class="choose-method__item choose-method__item--touch"><p>TouchnGo</p></li>
       </ul>
     </div>
-    <section>
-      <p>SECURE
-      <span>SSL ENCRYPTION</span>
-      </p>
+    <section class="bottom-payment">
+      <p class="bottom-payment__secure">SECURE</p>
+      <p class="bottom-payment__ssl">SSL ENCRYPTION</p>
     </section>
+    </div>
+    <div class="modal-language">
+      <span class="modal-language__close"></span>
+      <ul class="modal-lang-list">
+        <li class="modal-lang-list__item modal-lang-list__item--current" data-lang = "">Current language</li>
+        <li class="modal-lang-list__item" data-lang="en"><a href="#">ENGLISH</a></li>
+        <li class="modal-lang-list__item" data-lang="vn"><a href="#">VIETNAMESE</a></li>
+        <li class="modal-lang-list__item" data-lang="ph"><a href="#">PHILIPPINE</a></li>
+        <li class="modal-lang-list__item" data-lang="ch"><a href="#">CHINESE (HONG-KONG)</a></li>
+        <li class="modal-lang-list__item" data-lang="th"><a href="#">THAI</a></li>
+        <li class="modal-lang-list__item" data-lang="in"><a href="#">INDONESIAN</a></li>
+      </ul>
+    </div>
+    <div class="modal-overlay"></div>
   </section>
+<script type="module" src="js/script.js"></script>
 </body>
 </html>
