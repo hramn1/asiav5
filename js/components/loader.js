@@ -3,9 +3,9 @@ export default class Loader {
   }
   getTemplate(){
     return (
-      `<section class="loader">
-            <img src="/img/loader.svg" alt="">
-        </section>
+      `<section class="loader-wrapper">
+<div class="loader">      </div>
+</section>
             <section class="bottom-payment">
       <p class="bottom-payment__secure">SECURE</p>
       <p class="bottom-payment__ssl">SSL ENCRYPTION</p>

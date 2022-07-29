@@ -1,3 +1,23 @@
-.loader{
+.loader-wrapper{
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  margin: 10px 0;
+  width: 140px;
+  height: 140px;
+  background-image: url(../img/loader.svg);
+  background-repeat: no-repeat;
+  animation: spin 2s infinite linear;
+}
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
 }
