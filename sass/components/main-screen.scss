@@ -4,6 +4,7 @@
   padding: 10px;
   position: relative;
   background-color: #fff;
+  min-height: 90vh;
   &__title{
     line-height: 20.5px;
     font-size: 16px;
@@ -150,6 +151,21 @@
     border-radius: 50%;
     &[data-lang = "en"]{
       background-image: url(../img/english-flag.svg);
+    }
+    &[data-lang = "vn"]{
+      background-image: url(../img/vn.svg);
+    }
+    &[data-lang = "ph"]{
+      background-image: url(../img/ph.svg);
+    }
+    &[data-lang = "ch"]{
+      background-image: url(../img/ch.svg);
+    }
+    &[data-lang = "th"]{
+      background-image: url(../img/th.svg);
+    }
+    &[data-lang = "in"]{
+      background-image: url(../img/in.svg);
     }
   }
 }
