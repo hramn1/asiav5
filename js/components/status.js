@@ -1,19 +1,12 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.min.css">
-
-  <title>Document</title>
-</head>
-<body>
-<section class="payment_method">
-  <div class="wrapper">
-    <section class="payment-status payment-status--declined">
-      <h1 class="payment-status__title">PAYMENT</h1>
+export default class Status {
+  constructor(el) {
+    this.el = el;
+  }
+  getTemplate(){
+    const elemTarget = (this.el === 'payment-status--success')? "succesful" : "declined"
+    return (
+      `    <section class="payment-status ${this.el}">
+      <h1 class="payment-status__title">PAYMENT ${elemTarget}</h1>
       <h2 class="payment-status__inner-title">PAYMENT INFO</h2>
       <div class="payment-info">
           <p class="payment-info__label">Merchant</p>
@@ -41,9 +34,11 @@
       <p class="bottom-payment__secure">SECURE</p>
       <p class="bottom-payment__ssl">SSL ENCRYPTION</p>
     </section>
-  </div>
-
-</section>
-<script type="module" src="js/script.js"></script>
-</body>
-</html>
+`
+    )
+  }
+  render(){
+    document.querySelector('.wrapper').innerHTML = "";
+    document.querySelector('.wrapper').insertAdjacentHTML('beforeend', this.getTemplate());
+  }
+}

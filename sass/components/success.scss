@@ -4,6 +4,7 @@
     font-weight: 700;
     margin-top: 30px;
     text-align: center;
+    text-transform: uppercase;
   }
   &__inner-title{
     font-size: 14px;
@@ -29,21 +30,33 @@
   width: 270px;
   padding: 10px;
   color: $white-color;
-  background-color: #2BE9A3;
   text-decoration: none;
   line-height: 16px;
   border-radius: 30px;
   text-align: center;
   margin-bottom: 120px;
 }
-.payment-status--success .payment-info{
-  background-color: #2BE9A3;
+
+.payment-status .payment-info{
   padding: 16px 26px;
   color: $white-color;
-  background-image: url(../img/succesful-bg.svg);
   background-repeat: no-repeat;
   background-position: calc(95% - 2rem) 45%;
   &__label{
     color: $white-color;
   }
+}
+.payment-status--success .btn-merchant{
+  background-color: #2BE9A3;
+}
+.payment-status--success .payment-info{
+  background-color: #2BE9A3;
+  background-image: url(../img/succesful-bg.svg);
+}
+.payment-status--declined .btn-merchant{
+  background-color: #FF7A00;
+}
+.payment-status--declined  .payment-info{
+  background-color: #FF7A00;
+  background-image: url(../img/declined-bg.svg);
 }
