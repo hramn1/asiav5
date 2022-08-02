@@ -1,11 +1,12 @@
 .payment_method{
-  max-width: 1004px;
-  min-width: 300px;
+  max-width: 1024px;
+  min-width: 320px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 10px 3vw;
   position: relative;
   background-color: #fff;
   min-height: 90vh;
+  box-sizing: border-box;
   &__title{
     line-height: 20.5px;
     font-size: 16px;
@@ -58,7 +59,7 @@
     margin-bottom: 10px;
     border-radius: 10px;
     position: relative;
-    & p {
+    & .choose-method__text {
       position: relative;
       margin: 0;
       padding-left: 90px;
@@ -102,12 +103,17 @@
       position: absolute;
       width: 18px;
       left: 16px;
-      top: 14px;
+      top: 16px;
       height: 18px;
       border: 2px solid #F1F1F1;
       border-radius: 50%;
+      box-sizing: border-box;
     }
   }
+}
+.accordion__item_show.choose-method__item::before{
+  background-color: #2BE9A3;
+  border: 0;
 }
 .bottom-payment{
   display: flex;
@@ -226,9 +232,14 @@
       box-sizing: border-box;
       background-size: contain;
     }
-    &--current::after{
+    &--current{
+      & span {
+        opacity: 0.5;
+      }
+      &::after{
       border: 2px solid #2BE9A3;
       border-radius: 50%;
+      }
     }
     &[data-lang = "en"]::after{
       background-image: url(../img/english-flag.svg);
@@ -283,6 +294,7 @@
     text-transform: capitalize;
     padding-left: 82px;
     position: relative;
+    padding-right: 40px;
     &::after{
       display: block;
       content: "";
@@ -292,6 +304,7 @@
       background-image: url(../img/more-icon.svg);
       top: 13px;
       right: 13px;
+      transition: transform 0.2s ease-out;
     }
     &::before{
       display: block;
@@ -357,7 +370,40 @@
     }
   }
 }
+.pay-method-list__item.accordion__item_show::after{
+  transform: rotate(-180deg);
+  transition: transform 0.2s ease-out;
+}
 .choose-method-title{
   margin-left: 16px;
   margin-top: 24px;
+}
+.payment-form{
+  margin-left: -75px;
+  margin-top: 40px;
+  padding: 5px;
+  &__text{
+    text-align: center;
+    color: #939393;
+    margin-top: 16px;
+    text-transform: none;
+  }
+}
+.btn{
+  &--payment{
+    display: block;
+    background-color: #2BE9A3;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px;
+    border: 0;
+    border-radius: 30px;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+.pay-method-list__item.accordion__item_show{
+  background-color: $white-color;
+  box-shadow: 0 2px 9px rgba(213, 213, 213, 0.5);
 }

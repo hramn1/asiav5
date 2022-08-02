@@ -11,6 +11,11 @@ function chooseLang () {
       currentLang.dataset.lang = item.dataset.lang;
     })
   }
+  document.querySelector('.modal-language__close').addEventListener('click', function (){
+    document.querySelector('.modal-language').classList.remove('modal-language--active');
+    document.querySelector('.modal-overlay').classList.remove('modal-overlay--active');
+    document.querySelector('.wrapper').style.filter = "none";
+  })
   function showModal () {
     document.querySelector('.modal-lang-list__item--current').dataset.lang = currentLang.dataset.lang
     document.querySelector('.modal-language').classList.add('modal-language--active');

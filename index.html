@@ -27,21 +27,25 @@
     </div>
     <p class="choose-method-title">CHOOSE YOUR METHOD</p>
     <div class="choose-method">
-      <ul class="choose-method__list">
-        <li class="choose-method__item choose-method__item--debit"><p>Online debit</p></li>
-        <li class="choose-method__item choose-method__item--bank choose-method__item--active">
-          <p>Local Bank Transfer</p>
-          <ul class="pay-method-list">
+      <ul class="choose-method__list accordion">
+        <li class="choose-method__item choose-method__item--debit accordion__item">
+          <p class="choose-method__text accordion__header">Online debit</p>
+        </li>
+        <li class="choose-method__item choose-method__item--bank accordion__item">
+          <p class="choose-method__text accordion__header">Local Bank Transfer</p>
+          <ul class="pay-method-list accordion__body">
             <li class="pay-method-list__item pay-method-list__item--berhad">Public Bank Berhad</li>
-            <li class="pay-method-list__item pay-method-list__item--maybank">
-              <span>
+            <li class="pay-method-list__item pay-method-list__item--maybank accordion__item">
+              <span class="accordion__header">
                 Maybank Berhad
               </span>
-              <div>
-                <a href="" class="btn">PAY 50.00 MYR</a>
-                <p>Press “pay” to confirm and proceed
+              <section class="payment-form accordion__body">
+                <form action="post">
+                  <button class="btn btn--payment">PAY 50.00 MYR</button>
+                </form>
+                <p class="payment-form__text">Press “pay” to confirm and proceed<br>
                   to the payment page</p>
-              </div>
+              </section>
             </li>
             <li class="pay-method-list__item pay-method-list__item--rhb">RHB Bank</li>
             <li class="pay-method-list__item pay-method-list__item--hong">Hong Leong Bank Berhad</li>
@@ -51,8 +55,12 @@
             <li class="pay-method-list__item pay-method-list__item--affin">Affin Bank</li>
           </ul>
         </li>
-        <li class="choose-method__item choose-method__item--duti"><p>DuitNow</p></li>
-        <li class="choose-method__item choose-method__item--touch"><p>TouchnGo</p></li>
+        <li class="choose-method__item choose-method__item--duti">
+          <p class="choose-method__text">DuitNow</p>
+        </li>
+        <li class="choose-method__item choose-method__item--touch">
+          <p class="choose-method__text">TouchnGo</p>
+        </li>
       </ul>
     </div>
     <section class="bottom-payment">
@@ -63,7 +71,7 @@
     <div class="modal-language">
       <span class="modal-language__close"></span>
       <ul class="modal-lang-list">
-        <li class="modal-lang-list__item modal-lang-list__item--current" data-lang = "">Current language</li>
+        <li class="modal-lang-list__item modal-lang-list__item--current" data-lang = ""><span>Current language</span></li>
         <li class="modal-lang-list__item" data-lang="en"><a href="#">ENGLISH</a></li>
         <li class="modal-lang-list__item" data-lang="vn"><a href="#">VIETNAMESE</a></li>
         <li class="modal-lang-list__item" data-lang="ph"><a href="#">PHILIPPINE</a></li>

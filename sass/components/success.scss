@@ -1,0 +1,49 @@
+.payment-status{
+  &__title{
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 30px;
+    text-align: center;
+  }
+  &__inner-title{
+    font-size: 14px;
+    margin-left: 16px;
+    font-weight: 400;
+  }
+
+}
+.status-info{
+  padding: 14px;
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    & p:last-child{
+      font-weight: 700;
+    }
+  }
+}
+.btn-merchant{
+  display: block;
+  margin: 10px auto;
+  width: 270px;
+  padding: 10px;
+  color: $white-color;
+  background-color: #2BE9A3;
+  text-decoration: none;
+  line-height: 16px;
+  border-radius: 30px;
+  text-align: center;
+  margin-bottom: 120px;
+}
+.payment-status--success .payment-info{
+  background-color: #2BE9A3;
+  padding: 16px 26px;
+  color: $white-color;
+  background-image: url(../img/succesful-bg.svg);
+  background-repeat: no-repeat;
+  background-position: calc(95% - 2rem) 45%;
+  &__label{
+    color: $white-color;
+  }
+}
