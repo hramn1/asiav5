@@ -6,7 +6,7 @@ chooseLang();
 const loading = new Loader();
 const accord = new ItcAccordion('.choose-method__list');
 const accordInner = new ItcAccordion('.pay-method-list');
-const status = new Status('payment-status--success');
+const status = new Status('payment-status--declined');
 document.querySelector('.payment-form form').addEventListener('submit', function (){
   loading.render();
   setTimeout(function (){

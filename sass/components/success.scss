@@ -47,16 +47,16 @@
   }
 }
 .payment-status--success .btn-merchant{
-  background-color: #2BE9A3;
+  background-color: $green-color-light;
 }
 .payment-status--success .payment-info{
-  background-color: #2BE9A3;
+  background-color: $green-color-light;
   background-image: url(../img/succesful-bg.svg);
 }
 .payment-status--declined .btn-merchant{
-  background-color: #FF7A00;
+  background-color: $declined-color;
 }
 .payment-status--declined  .payment-info{
-  background-color: #FF7A00;
+  background-color: $declined-color;
   background-image: url(../img/declined-bg.svg);
 }

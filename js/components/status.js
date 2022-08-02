@@ -3,7 +3,7 @@ export default class Status {
     this.el = el;
   }
   getTemplate(){
-    const elemTarget = (this.el === 'payment-status--success')? "succesful" : "declined"
+    const elemTarget = (this.el === 'payment-status--success')? "successful" : "declined"
     return (
       `    <section class="payment-status ${this.el}">
       <h1 class="payment-status__title">PAYMENT ${elemTarget}</h1>

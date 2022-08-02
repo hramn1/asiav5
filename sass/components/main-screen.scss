@@ -4,7 +4,7 @@
   margin: 0 auto;
   padding: 10px 3vw;
   position: relative;
-  background-color: #fff;
+  background-color: $white-color;
   min-height: 90vh;
   box-sizing: border-box;
   &__title{
@@ -21,17 +21,17 @@
   margin-left: 16px;
 }
 .payment-info{
-  background-image: linear-gradient(to top, #3DAF85,  #2BE9A3);
+  background-image: linear-gradient(to top, #3DAF85,  $green-color-light);
   border-radius: 20px;
   padding: 2px;
   &-inner{
-    background-color: #fff;
+    background-color: $white-color;
     padding: 16px 26px;
     border-radius: 20px;
   }
   &__label{
     font-size: 14px;
-    color: #2BE9A3;
+    color: $green-color-light;
     line-height: 18px;
     margin: 0;
   }
@@ -54,7 +54,7 @@
   }
   &__item{
     text-transform: uppercase;
-    background-color: #fff;
+    background-color: $white-color;
     padding: 16px 17px 17px 34px;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -112,7 +112,7 @@
   }
 }
 .accordion__item_show.choose-method__item::before{
-  background-color: #2BE9A3;
+  background-color: $green-color-light;
   border: 0;
 }
 .bottom-payment{
@@ -304,8 +304,8 @@
 .btn{
   &--payment{
     display: block;
-    background-color: #2BE9A3;
-    color: #ffffff;
+    background-color: $green-color-light;
+    color: $white-color;
     font-weight: 700;
     text-transform: uppercase;
     padding: 10px;
